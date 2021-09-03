@@ -15,11 +15,11 @@ vector<int> init_vector(){
     return v;
 }
 void init_map(map<char,int> &m){
-    m.insert(make_pair('A',1));
-    m.insert(make_pair('E',2));
-    m.insert(make_pair('I',3));
-    m.insert(make_pair('O',4));
-    m.insert(make_pair('U',5));
+    m.insert(make_pair('A',0));
+    m.insert(make_pair('E',1));
+    m.insert(make_pair('I',2));
+    m.insert(make_pair('O',3));
+    m.insert(make_pair('U',4));
 }
 
 int solution(string word) {
@@ -29,7 +29,7 @@ int solution(string word) {
     int len = word.length();
     int answer = 0;
     for(int i=0;i<len;i++){
-        answer += (v[i]*(m[word[i]]-1)+1);
+        answer += (v[i]*(m[word[i]])+1);
     }
     return answer;
 }
