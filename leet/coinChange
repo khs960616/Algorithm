@@ -1,0 +1,30 @@
+/*
+coins 배열에 존재하는 값을 선택하여 amount를 달성하기 위해서 최소한의 동전 개수
+동전의 값은 1이상 2^31-1 이하, 동전 배열의 길이는 1이상 12 이하
+amount는 0이상, 10000 이하
+
+1. 특정 coin이 선택되는 경우 동전의 개수가 1개가 증가한다.
+2. amount금액을 맞추기 위해 동전을 순차적으로 선택할 때, i번째 coin이 선택되는 경우, (amount- i번째 coin의 금액)을 맞추기 위한 동전 개수의 최소값 + 1이 되어야 한다.
+
+부분 최적해의 대상 : (amount- i번째 coin의 금액) 금액을 만족시키는 최소한의 동전 개수
+
+*/
+
+
+class Solution {
+public:
+    int coinChange(vector<int>& coins, int amount) {
+        int NOT_FOUND = 20000;
+            
+        vector<int> v(amount+1, NOT_FOUND);
+        v[0] = 0;
+        
+        for(int coin: coins){
+            for(int i=1; i<=amount; i++) {
+                if (i-coin<0) continue;
+                v[i] = min(v[i], v[i-coin]+1);
+            }
+        }
+        return (v[amount] == NOT_FOUND) ? -1 : v[amount];
+    }
+};
