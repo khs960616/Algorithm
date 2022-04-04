@@ -29,17 +29,19 @@ v[0] -> v[0] 보다 현재값이 더 작다면 대입
 class Solution {
 public:
     int lengthOfLIS(vector<int>& nums) {
-        int NOT_EXIST = 20000;
         int answer = 1;
-        int nSize = nums.size();
-        vector<int> v(nSize, NOT_EXIST);
-        v[0] = nums[0];
-        
+        vector<int> v;
+        v.push_back(nums[0]);
+       
         for(int num: nums) {
             for(int i=answer; i>0; i--) {
-                if(v[i-1]<num) {
+                if(v[i-1]>=num) continue;
+                
+                if(i==answer) {
+                    v.push_back(num);
+                    answer++;
+                } else {
                     v[i] = min(v[i], num);
-                    if(i==answer) answer++;
                 }
             }
             if(v[0] > num) v[0] = num;
