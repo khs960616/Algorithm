@@ -13,20 +13,33 @@
     즉 answer벡터를 제외하고는 별도의 extra space를 사용하지 않는 방법이 있는가? 
     
     size = n 일 때,
-    answer[n] = 1 * (nums[n-1] * nums[n-2] * num[n-3] ...... n[0])
-    answer[n-1] = (num[n]) * (nums[n-2] * nums[n-3] * .... n[0])
-    answer[n-2] = (num[n] * num[n-1]) * (num[n-3]*num[n-4]* .... * n[0])
+    answer[n-1] = 1 * (nums[n-2] * nums[n-3] * .... n[0])
+    answer[n-2] = (1 * num[n-1]) * (num[n-3]*num[n-4]* .... * n[0])
+    answer[n-3] = (1* num[n-1] * num[n-2]) * (num[n-4]*nums[n-5]..... n[0])
     ...
     
-    answer[1] = (num[n]*num[n-1]* ........)  * (n[0])
-    answer[0] = (num[n] * num[n-1] * .....* n[1])
-    
+    answer[2] = (num[n-1]* ......) * (n[1]*n[0])
+    answer[1] = (num[n-1] * ........)  * (n[0])
+    answer[0] = (num[n-1] * .....* n[1]) * 1
+
     왼쪽따로 오른쪽 따로 곱하면 2n으로 끝날듯해보임
 */
+
 class Solution {
 public:
     vector<int> productExceptSelf(vector<int>& nums) {
         vector<int> answer(nums.size(), 1);
+        int idx = nums.size()-1;
+
+        for(int i=idx-1; i>=0; i--) {
+            answer[i] = answer[i+1] * nums[i+1];
+        }
+
+        int suffix = nums[0];
+        for(int i=1; i<=idx; i++) {
+            answer[i] *= suffix;
+            suffix*=nums[i];
+        }
         
         return answer;
     }
