@@ -55,6 +55,7 @@ void dfs(const vector<vector<string>>& relation,
     
     //조합
     for(int i=0; i<columnSize; ++i) {
+        // 다음과 같이 조합을 오름차순으로 뽑게되면 두가지 이점이 있음 1. 키값이 정렬된 순서로 생성됨 2. 중복되는 키값을 체크하지 않으므로 함수 호출이 적어짐
         if(cnt!=0 && selectedColumn[cnt-1] >= i) continue;
         
         if(!isVisit[i]) {
