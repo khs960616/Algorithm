@@ -88,3 +88,35 @@ public:
         return result;
     }
 };
+
+
+/* 
+
+discussion에 다른 사람이 구현한 코드.
+재귀로 구현하니 훨씬 간결하고 이해하기 좋은듯..
+분할정복 문제도 좀 더 풀어보면 좋을 듯
+
+이외에도 priority_queue (min heap) 을 이용해서 푸는 방식도 있었음
+
+class Solution {
+public:
+    ListNode* merge2Lists(ListNode* l1, ListNode* l2) {
+        if (!l1) return l2;
+        if (!l2) return l1;
+        ListNode* head = l1->val <= l2->val? l1 : l2;
+        head->next = l1->val <= l2->val ? merge2Lists(l1->next, l2) : merge2Lists(l1, l2->next);
+        return head;
+    }
+    
+    ListNode* mergeKLists(vector<ListNode*>& lists) {
+        if (lists.size() == 0) return NULL;
+        
+        ListNode* head = lists[0];
+        
+        for (int i = 1; i < lists.size(); i++)
+            head = merge2Lists(head, lists[i]);
+        
+        return head;
+    }
+};
+*/
