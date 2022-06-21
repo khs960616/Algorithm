@@ -31,3 +31,8 @@ Container adaptors provide a different interface for sequential containers.
 성능 퍼포먼스 관련 자료 : 
 https://baptiste-wicht.com/posts/2012/12/cpp-benchmark-vector-list-deque.html
 https://nonuruzun.medium.com/stl-container-performance-3ec5a8fbc3be
+
+---
+### 행렬 거듭 제곱을 이용한 선형 점화식 구하기
+
+https://driip.me/00556a4c-0782-4c5b-a86a-8e27e5f4ac1b
