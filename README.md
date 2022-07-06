@@ -36,3 +36,7 @@ https://nonuruzun.medium.com/stl-container-performance-3ec5a8fbc3be
 ### 행렬 거듭 제곱을 이용한 선형 점화식 구하기
 
 https://driip.me/00556a4c-0782-4c5b-a86a-8e27e5f4ac1b
+
+---
+### Meet in the middle
+https://www.secmem.org/blog/2019/03/08/meet-in-the-middle/
