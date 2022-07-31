@@ -40,3 +40,7 @@ https://driip.me/00556a4c-0782-4c5b-a86a-8e27e5f4ac1b
 ---
 ### Meet in the middle
 https://www.secmem.org/blog/2019/03/08/meet-in-the-middle/
+
+---
+### Rabin-Karp 알고리즘을 이용한 2차원 문자열 벡터의 패턴 매칭
+https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching-in-matrix/
