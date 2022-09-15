@@ -10,6 +10,8 @@ maxHeap, minHeap로 만들어서 D -1,  D 1에 따라 poll(), remove() 연산을
 //https://stackoverflow.com/questions/12719066/priority-queue-remove-complexity-time 해당 부분 보면 
 어쩌피 contains 연산 진행하면서 remove자체도 n의 시간복잡도를 가지긴함. 
 
+https://codeung.tistory.com/315  << 다음과 같이 java.util에서 제공하는 자료구조 구현체를 사용하려면 treeMap을 사용하는게 가장 적절한듯함. 
+
 */
 class Solution {
     private List<Integer> list = new ArrayList<>();
