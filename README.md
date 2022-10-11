@@ -50,3 +50,8 @@ https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching-in-matr
 https://tech.kakao.com/2022/01/14/2022-kakao-recruitment-round-1/#%EB%AC%B8%EC%A0%9C-6-%ED%8C%8C%EA%B4%B4%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%80-%EA%B1%B4%EB%AC%BC
 
 6번 문제.. 쩐다.
+
+---
+### 정규표현식 
+https://velog.io/@koseungbin/%EC%A0%95%EA%B7%9C-%ED%91%9C%ED%98%84%EC%8B%9D
+
