@@ -44,3 +44,9 @@ https://www.secmem.org/blog/2019/03/08/meet-in-the-middle/
 ---
 ### Rabin-Karp 알고리즘을 이용한 2차원 문자열 벡터의 패턴 매칭
 https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching-in-matrix/
+
+---
+### 누적합 구하기
+https://tech.kakao.com/2022/01/14/2022-kakao-recruitment-round-1/#%EB%AC%B8%EC%A0%9C-6-%ED%8C%8C%EA%B4%B4%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%80-%EA%B1%B4%EB%AC%BC
+
+6번 문제.. 쩐다.
