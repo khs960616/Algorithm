@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Boj23288 {
+public class Boj17837 {
 	
 	private static int n,k;
 	private static final Tile[][] board = new Tile[12][12]; 
